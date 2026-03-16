@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run DebugServer",
+            "type": "shell",
+            "command": "Tools/DebugServer/DebugServerConsole -disable-cmdline -port 3333 -smp cluster0:cluster1",
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Stop DebugServer",
+            "type": "shell",
+            "command": "taskkill /f /im DebugServerConsole.exe", // For Windows
+            // "command": "pkill DebugServerConsole", // For Linux/macOS
+            "problemMatcher": []
+        }
+    ]
+}
