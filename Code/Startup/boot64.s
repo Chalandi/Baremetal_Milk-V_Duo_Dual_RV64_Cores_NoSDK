@@ -132,8 +132,8 @@ _start:
         fscsr x0
 
         /* invalidate I-cache and D-cache */
-        li x3, 0x13
-        csrc mcor, x3
+        li t0, 0x13
+        csrc mcor, t0
 
        /* enable I-cache, D-cache and branch prediction */
        /* note: since the C906 only supports write-back mode, we must manually flush the cache to maintain coherency */
