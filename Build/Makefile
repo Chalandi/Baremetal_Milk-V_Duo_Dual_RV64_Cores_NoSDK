@@ -337,7 +337,7 @@ GENERATE:
 	@-echo +++ generate: $(OUTPUT_DIR)/$(PRJ_NAME).bin
 	@$(OBJCOPY) $(OUTPUT_DIR)/$(PRJ_NAME).elf -O binary $(OUTPUT_DIR)/$(PRJ_NAME).bin
 	@-echo +++ generate: $(OUTPUT_DIR)/fip.img
-	@-$(FIPTOOL) --fsbl $(FSBL) --ddr_param $(DDR_PARAM) --opensbi ../output/$(PRJ_NAME).bin --uboot $(DUMMY_FW) --rtos $(DUMMY_FW) ../output/fip.bin 2> /dev/null > /dev/null || true
+	@-$(FIPTOOL) --fsbl $(FSBL) --ddr_param $(DDR_PARAM) --opensbi ../Output/$(PRJ_NAME).bin --uboot $(DUMMY_FW) --rtos $(DUMMY_FW) ../Output/fip.bin 2> /dev/null > /dev/null || true
 
 
 
